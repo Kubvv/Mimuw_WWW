@@ -1,0 +1,14 @@
+{% for dire in all_dire %}
+    <li>
+        <p class="directory" id="DirNo{{ dire.pk }}"> {{ dire.level }}{{ dire.name }} </p>
+        {% for file in dire.files.all %}
+            {% if file.availability %}
+            <div class="file" id="FileNo{{ file.pk }}">
+                <button class="transparent" onclick="showFile('{{ file.pk }}')">
+                    <span class="hover-text">{{ file.name }}</span>
+                </button>
+            </div class="file">
+            {% endif %}
+        {% endfor %}
+    </li>
+{% endfor %}

@@ -1,0 +1,64 @@
+{% extends "index/base.html" %}
+
+{% block mainpage %}
+    <div class="parent">
+        <nav class="menu-container"> 
+            <div class="menu-item"> 
+                <a href="/dir_create"><span class="hover-text">Add Directory</span></a>
+            </div>
+            <div class="menu-item"> 
+                <a href="/file_create"><span class="hover-text">Add File</span></a>
+            </div>
+            <div class="menu-item"> 
+                <button class="menu_transparent" onclick="deleteView()">
+                    <span class="hover-text">Delete</span>
+                </button>
+            </div>
+            <div class="menu-item"> 
+                <button class="menu_transparent" onclick="compile()">
+                    <span class="hover-text">Compile</span>
+                </button>
+            </div>
+            <div class="menu-item">
+                <button class="menu_transparent" onclick="changeTheme()">
+                    <span class="hover-text">Change theme</span>
+                </button>
+            </div>
+            <div class="menu-item">
+                <a href="/logoutuser"><span class="hover-text">Logout</span></a>
+            </div>
+        </nav>
+
+        <nav class="file-section">
+            <ul class="dire">
+                {% include "index/directory_tree.html" %}
+            </ul>
+        </nav>
+
+        <div class="main-section">
+            <code class="main-section" id="main-section">
+{{ content }}
+            </code>
+        </div>
+
+        <div class="elements-section" id="elements-section"> 
+            {% include "index/elements.html" %}
+        </div>
+
+        <footer class="data-section">
+            <div class="overlap-row">
+                <div class="{{ overlaps.0 }}">
+                    <a href="{% url 'showTab' tab='prover' %}"><span class="hover-text">PROVERS</span></a>
+                </div>
+                <div class="{{ overlaps.1 }}">
+                    <a href="{% url 'showTab' tab='vcs' %}" ><span class="hover-text">VCs</span></a>
+                </div>
+                <div class="{{ overlaps.2 }}">
+                    <a href="{% url 'showTab' tab='result' %}"><span class="hover-text">RESULT</span></a>
+                </div>
+                <div class="empty-overlap"></div>
+            </div>
+            {% include "index/tabs.html" %}
+        </footer>
+    </div>
+{% endblock mainpage %}

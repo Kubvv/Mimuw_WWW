@@ -1,0 +1,18 @@
+{% extends "index/base.html" %}
+
+{% block mainpage %}
+    {% for dire in all_dire %}
+        <div class="deletion">    
+            <p class="deletion-left">{{ dire.name }}</p>
+            <a class="deletion-right" href="{% url 'directoryDelete' pk=dire.pk %}"><span class="hover-text">Delete</span></a>
+        </div>
+        {% for file in dire.files.all %}
+            {% if file.availability %}
+                <div class="deletion">       
+                    <p class="deletion-left-file">{{ file.name }}</p>
+                    <a class="deletion-right" href="{% url 'fileDelete' pk=file.pk %}"><span class="hover-text">Delete</span></a>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+{% endblock mainpage %}

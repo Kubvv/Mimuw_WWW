@@ -1,0 +1,37 @@
+<div class="bottom">
+{% ifequal tab "prover" %}
+    <div class="central-tab">
+        <h3 class="norm-header">Choose a prover:</h3>
+        <form action="select_prover/" method="POST"> {% csrf_token %}
+            <select multiple name = "provers" class="norm-color" size="4">
+                {% for option in compOptions %}
+                    <option value="{{ option }}" class="norm-color">{{ option }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Select">
+        </form>
+    </div>
+{% endifequal %}
+{% ifequal tab 'vcs' %}
+    <div class='central-tab'>
+        <h3 class="norm-header">Choose a prop and rte:</h3>
+        <form action="select_vc/" method="POST"> {% csrf_token %}
+            <select multiple name = "vcs" class="norm-color" size="4">
+                <option value="None" class="norm-color">None</option>
+                {% for option in compOptions %}
+                    <option value="{{ option }}" class="norm-color">{{ option }}</option>
+                    <option value="-{{ option }}" class="norm-color">-{{ option }}</option>
+                {% endfor %}
+            </select>
+            <select multiple name = "rte" class="norm-color" size="4">
+                <option value="Yes" class="norm-color">Yes</option>
+                <option value="No" class="norm-color">No</option>
+            </select>
+            <input type="submit" value="Select">
+        </form>
+    </div>
+{% endifequal %}
+{% ifequal tab 'result'%}
+    <p class="norm-text">{{ extra }}</p>
+{% endifequal %}
+</div>

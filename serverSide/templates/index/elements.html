@@ -1,0 +1,16 @@
+{% for status, section, content, begin, end in frama %}
+    <div>
+        <p class="norm-text">
+            ------------------------------------------------------------
+        </p>
+        <button class="small" onclick="changeVisibility('{{ forloop.counter0 }}')">+</button>
+    </div>
+    {% if end %}
+        <div class="frama{{ status }}">
+            <p class="norm-text">{{ begin }},{{ end }}</p>
+        </div>
+    {% endif%}
+    <div id="section{{ forloop.counter0 }}" class="frama{{ status }}">
+        <p class="norm-text"><abbr title="{{ section }} {{ begin }}"> {{ content }} </abbr></p>
+    </div>
+{% endfor %}

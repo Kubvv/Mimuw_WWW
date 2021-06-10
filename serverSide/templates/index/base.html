@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <title>frama-c online</title>
+        <link rel="stylesheet" href="{% static 'index/stylesmin.css' %}" type="text/css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="{% static 'index/ui.js' %}"></script>
+        <link rel="shortcut icon" type="image/png" href="{% static 'index/favicon.png' %}"/>
+    </head>
+    <body class="{{ theme }}" id="body">
+        {% block mainpage %}{% endblock mainpage %}
+    </body>
+</html>

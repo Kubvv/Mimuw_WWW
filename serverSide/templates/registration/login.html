@@ -1,0 +1,14 @@
+{% extends "index/base.html" %}
+
+{% block mainpage %}
+    <p class="norm-text-login">Login here</p>
+    <div class="creation">
+        <form method="POST"> {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Login</button>
+            <p class="norm-text-login">Don't have an account? 
+                <a href="/register"><span class="hover-text-login">Create one here</span></a>
+            </p>
+        </form>
+    </div>
+{% endblock %}

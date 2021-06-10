@@ -1,0 +1,394 @@
+:root { 
+    --border-color: #5d5d5d;
+    --dire-border-color: #dc143c;
+}
+
+body {
+    margin: 0;
+    border-color: var(--border-color);
+}
+
+body.normal-color {
+    --background-color: #000000;
+    --text-color: #dc143c;
+    --inactive-foot-button: rgb(45, 45, 45);
+    --active-foot-button: rgb(100,100,100);
+    --hover-button-color: rgb(61, 0, 0);
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+body.alt-color {
+    --alt-background-color: #fffafa;
+    --alt-text-color: #11003f;
+    --inactive-foot-button: rgb(150, 150, 150);
+    --active-foot-button: rgb(200, 200, 200);
+    --hover-button-color: rgb(100, 100, 200);
+    color: var(--alt-text-color);
+    background-color: var(--alt-background-color);
+}
+
+/* general text classes */
+
+.central {
+    text-align: center;
+    vertical-align: middle;
+    padding: 2px;
+}
+
+.norm-text {
+    margin: auto;
+    font-family: Arial;
+    text-align: center;
+    vertical-align: middle;
+    padding: 2px;
+    color: inherit;
+}
+
+.norm-text-login {
+    font-family: Arial;
+    text-align: center;
+    vertical-align: middle;
+    padding: 2px;
+    color: inherit;
+}
+
+.norm-header {
+    margin: 10px;
+    font-family: Arial;
+    text-align: center;
+    vertical-align: middle;
+    padding: 2px;
+    color: inherit;
+}
+
+.hover-text {
+    margin: auto;
+    font-family: Arial;
+    text-align: center;
+    vertical-align: middle;
+    padding: 2px;
+}
+
+.hover-text-login {
+    margin: auto;
+    font-family: Arial;
+    text-align: center;
+    padding: 2px;
+}
+
+.hover-text:hover {
+    color: var(--hover-button-color);
+}
+
+.hover-text-login:hover {
+    color: var(--hover-button-color);
+}
+
+/* menu section */
+
+nav.menu-container {
+    overflow: hidden;
+    border: 1px;
+    border-style: solid;
+    border-color: var(--border-color);
+    display: flex;
+    flex-direction: row;
+}
+
+button.menu_transparent {
+    display: inline-block;
+    background-color: inherit;
+    color: inherit;
+    font-size: 35px;
+    cursor: pointer;
+    border: none;
+}
+
+/* menu flex list */
+
+div.menu-item {
+    display: flex;
+    flex: 1;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 35px;
+    align-items: center;
+    justify-content: center;
+}
+
+div a {
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    color: inherit;
+}
+
+button.basic-button {
+    border: none;
+    cursor: pointer;
+    font-size: 35px;
+    color: inherit;
+    background-color: inherit;
+}
+
+button.file-button {
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: inherit;
+    background-color: inherit;
+}
+
+/* file selection section */
+
+nav.file-section {
+    overflow: auto;
+    border: 1px;
+    border-style: solid;
+    border-color: var(--border-color);
+    text-align: center;
+}
+
+div.file {
+    padding-right: 50px;
+    margin: 3px;
+}
+
+p.directory {
+    font-size: 25px;
+    color: inherit;
+    padding-right: 50px;
+    text-align: left;
+    margin: 3px;
+}
+
+ul.dire {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px
+}
+
+li.dire {
+    border: 1px solid var(--dire-border-color)
+}
+
+button.transparent {
+    background-color: inherit;
+    color: inherit;
+    width: 20%;
+    height: 1%;
+    cursor: pointer;
+    border: none;
+}
+ 
+/* main-section */
+
+div.main-section {
+    overflow-y: auto;
+    border: 1px;
+    border-style: solid;
+    border-color: var(--border-color);
+    display: flex;
+    padding: 15px;
+}
+
+code.main-section {
+    white-space: pre-wrap;
+    min-width: calc(100% - 15px);
+    min-height: calc(100% - 15px);
+}
+
+/* code elements section */
+
+div.elements-section {
+    overflow: auto;
+    border: 1px;
+    border-style: solid;
+    border-color: var(--border-color);
+    text-align: center;
+}
+
+div.framaValid {
+    background-color: rgb(0,240,0); 
+}
+
+div.framaInvalid {
+    background-color: rgb(153, 77, 0);
+}
+
+div.framaTimeout {
+    background-color: rgb(230, 230, 0);
+}
+
+div.framaUnknown {
+    background-color: rgb(102, 0, 204);
+}
+
+div.framaCounterexample {
+    background-color: rgb(0, 255, 255); 
+}
+
+div.framaProved {
+    background-color: rgb(0, 51, 0);
+}
+
+div.framaUnchecked {
+    background-color: rgb(255, 204, 255);
+}
+
+button.small {
+    background-color: var(--border-color);
+    width: 10%;
+    height: 10%;
+    border: none;
+    color: var(--text-color);
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    float: right;
+    cursor: pointer;
+}
+
+/* footer data section */
+
+footer.data-section {
+    overflow: hidden;
+    border: 1px;
+    border-style: solid;
+    border-color: var(--border-color);
+}
+
+div.central-tab {
+    text-align: center;
+    vertical-align: middle;
+    padding: 2px;
+    margin: 20px;
+}
+
+.norm-color {
+    background-color: inherit;
+    color: inherit;
+}
+
+div.bottom {
+    background-color: inherit;
+    color: inherit;
+    overflow: auto;
+    height: 100%;
+}
+
+/* footer flex list */
+
+div.overlap-row {
+    display: flex;
+    flex-direction: row;
+    border: 1px;
+    border-top: 0px;
+    border-style: solid;
+    border-color: var(--border-color);
+    height: 18px;
+}
+
+.overlap-active {
+    flex: 1;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.5vh;
+    clip-path: polygon(20% 0, 80% 0, 100% 100%, 0% 100%);
+    background-color: var(--active-foot-button);
+}
+
+.overlap {
+    flex: 1;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.5vh;
+    clip-path: polygon(20% 0, 80% 0, 100% 100%, 0% 100%);
+    background-color: var(--inactive-foot-button);
+}
+
+.empty-overlap {
+    flex: 7;
+}
+
+button.overlap-button {
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    background-color: inherit;
+}
+
+.deletion {
+    margin: auto;
+    overflow: hidden;
+    width: 400px
+}
+
+.deletion-left {
+    float: left;
+    font-size: 25px;
+    color: inherit;
+    margin: 2px;
+}
+
+.deletion-left-file {
+    float: left;
+    font-size: 25px;
+    color: inherit;
+    margin: 2px;
+    padding-left: 50px;
+}
+
+.deletion-right {
+    float: right;
+    font-size: 25px;
+    color: inherit;
+    margin: 2px;
+    background: inherit;
+    cursor: pointer;
+    border: none;
+}
+
+div.creation {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+
+/* media for grid */
+
+@media screen and (min-width: 801px) {
+    div.parent {
+        display: grid;
+        grid-template-rows: repeat(10, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+        height: 100vh;
+    }
+
+    nav.menu-container {
+        grid-column: 1 / 6;
+        grid-row: 1 / 2;
+    }
+
+    div.main-section {
+        grid-column: 2 / 5;
+        grid-row: 2 / 8; 
+    }
+
+    nav.file-section {
+        grid-column: 1 / 1;
+        grid-row: 2 / 11;
+    }
+
+    div.elements-section {
+        grid-column: 5 / 6;
+        grid-row: 2 / 8;
+    }
+
+    footer.data-section {
+        grid-column: 2 / 6;
+        grid-row: 8 / 11;
+    }
+}
